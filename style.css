@@ -25,7 +25,7 @@ nav a {
 footer {
     background-color: #ffcce0;
     text-align: center;
-   margin-top: 10px; 
+   margin-top: 100px; 
     padding: 5px;
     
 }
@@ -137,4 +137,7 @@ align-items: center;
 .navbar button:hover {
   background-color: #ff69b4; /* Hot pink on hover */
   color: white;
+}
+a{
+    color: #6b2c5b;
 }
