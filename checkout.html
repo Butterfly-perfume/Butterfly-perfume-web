@@ -6,49 +6,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\logo.png" alt="Butterfly Perfume Logo" class="logo">
+        <h1>Butterfly Perfume</h1>
+      <nav class="navbar">
+  <button onclick="document.location='index.html'"><img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\home.png"width="40cm" height="40cm"><br>Home</button>
+  <button onclick="document.location='checkout.html'"><img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\cart.png"width="40cm" height="40cm">Checkout</button>
+  <button onclick="document.location='login.html'"><img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\Butterfly-perfume-web-main\profile.png"width="40cm" height="40cm"><br>Login</button>
+  <button onclick="document.location='Register.html'"><img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\Butterfly-perfume-web-main\profile.png"width="40cm" height="40cm">Register</button>
+</nav>
+    </header>
+    
 <main class="checkout-page">
-    <div id="l" style="margin-left: 1cm;">
-        <div>
-            <label>Customer Name:</label>  
-            <input type="text" class="f2">
-            <label>Customer Phone:</label> 
-            <input type="text" class="f2">
-        </div>
-        <div class="m-r">
-            <label>Date Left:</label>  
-            <input type="date" class="f2">
-            <label class="m3">Time Left:</label>   
-            <input type="time" class="f2">
-        </div>
-        <div class="m1">
-            <label>Date Expected:</label>  
-            <input type="date" class="f2"> 
-            <label class="m2">Time Expected:</label>   
-            <input type="time" class="f2">
-        </div>
-    </div>
+    <h1 style="text-align: center;margin-bottom: 2cm;">Place Your Order</h1>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Address" required>
+        <input type="text" placeholder="Card Number" required>
+    </form>
     <hr style="margin-right:34.5cm;">
 
     <div class="d-flex">
         <form onsubmit="return false;">
-            <table>
+            <table style="font-weight: bold;">
                 <tbody>
                     <tr>
-                        <td>Dream Blossom Perfume -</td>
+                        <td>Dream Blossom Perfume  </td>
                         <td class="price" data-index="1">100.00</td>
                         <td><input type="number" class="quantity" value="0"></td>
                         <td><button onclick="calculateSubtotal(1, this)">Calc</button></td>
                         <td><span class="subtotal1">0.00</span></td>
                     </tr>
                     <tr>
-                        <td>Pink Fantasy -</td>
+                        <td>Pink Fantasy  </td>
                         <td class="price" data-index="2">150.00</td>
                         <td><input type="number" class="quantity" value="0"></td>
                         <td><button onclick="calculateSubtotal(2, this)">Calc</button></td>
                         <td><span class="subtotal2">0.00</span></td>
                     </tr>
                     <tr>
-                        <td>Floral Wish -</td>
+                        <td>Floral Wish  </td>
                         <td class="price" data-index="3">200.00</td>
                         <td><input type="number" class="quantity" value="0"></td>
                         <td><button onclick="calculateSubtotal(3, this)">Calc</button></td>
@@ -57,14 +55,14 @@
                 </tbody>
             </table>
 
-            <div id="l" style="text-align: center; margin-top: 20px;">
-                <button onclick="calculateorder()">Calculate Order</button><br>
-                <label class="cleaningtotal">cleaning total: 0.00</label><br>
-                <label class="taxrate">tax rate: 5.75%</label><br>
-                <label class="taxamount">tax amount: 0.00</label><br>
-                <label class="ordertotal">order total: 0.00</label><br>
-                            <button onclick="checkout()">Checkout</button><br>
-<p id="checkout-message" style="color: green; font-weight: bold; display: none; margin-top: 10px;"></p>
+            <div id="l" style="text-align: center; margin-top: 20px; font-weight: bold;">
+                <button onclick="calculateorder()">Calculate Order</button><br><br>
+                <label class="cleaningtotal">Cleaning Total:  0.00</label><br><br>
+                <label class="taxrate">Tax Rate: 5.75%</label><br><br>
+                <label class="taxamount">Tax Amount: 0.00</label><br><br>
+                <label class="ordertotal">Order Total: 0.00</label><br><br>
+                <button onclick="checkout()">Checkout</button><br>
+<p id="checkout-message" style=" font-weight: bold; display: none; margin-top: 10px;"></p>
             </div>
             
 
@@ -107,5 +105,9 @@
     messageElement.style.display = "block";}
 
 </script>
+<footer>
+    <img src="C:\Users\a_fouad\Downloads\Butterfly-perfume-web-main\contact.png" alt="" width="500cm"height="150cm">
+    <p>&copy; 2025 Butterfly Perfume</p>
+</footer>
 </body>
 </html>
