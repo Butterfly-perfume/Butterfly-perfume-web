@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع - Butterfly Perfume</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo-link">
+                 <img src="../assetes/images/logo.jpg" alt="Butterfly Perfume Logo" class="logo">
+            </a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="home.html#about">من نحن</a></li>
+                    <li><a href="home.html#products">المنتجات</a></li>
+                    <li><a href="home.html#stores">المتاجر</a></li>
+                    <li><a href="home.html#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="login.html" class="icon-link" aria-label="Login/Register">
+                     <img src="../assetes/images/profile.png" alt="Login" class="icon">
+                </a>
+                <a href="checkout.html" class="icon-link" aria-label="Checkout Cart">
+                     <img src="../assetes/images/cart.png" alt="Checkout" class="icon">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="checkout-page">
+        <h1>إتمام الطلب</h1>
+        <form id="checkout-user-info">
+            <input type="text" name="fullname" placeholder="الاسم الكامل" required>
+            <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+            <input type="text" name="address" placeholder="العنوان بالتفصيل" required>
+            <input type="tel" name="phone" placeholder="رقم الهاتف" required> <input type="text" name="cardnumber" placeholder="رقم البطاقة (اختياري للدفع)">
+        </form>
+        <hr>
+
+        <div class="d-flex">
+             <form id="checkout-items-form">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المنتج</th>
+                            <th>السعر (جنيه)</th>
+                            <th>الكمية</th>
+                            <th>الإجمالي الفرعي (جنيه)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="المنتج">عطر شاين</td>
+                            <td data-label="السعر (جنيه)" class="price" data-index="1">200.00</td>
+                            <td data-label="الكمية"><input type="number" class="quantity" value="1" min="0"></td>
+                            <td data-label="الإجمالي الفرعي (جنيه)"><span class="subtotal" data-item="1">200.00</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="المنتج">عطر بلوسوم</td>
+                            <td data-label="السعر (جنيه)" class="price" data-index="2">230.00</td>
+                            <td data-label="الكمية"><input type="number" class="quantity" value="0" min="0"></td>
+                            <td data-label="الإجمالي الفرعي (جنيه)"><span class="subtotal" data-item="2">0.00</span></td>
+                        </tr>
+                        <tr>
+                            <td data-label="المنتج">عطر نايت</td>
+                            <td data-label="السعر (جنيه)" class="price" data-index="3">260.00</td>
+                            <td data-label="الكمية"><input type="number" class="quantity" value="0" min="0"></td>
+                            <td data-label="الإجمالي الفرعي (جنيه)"><span class="subtotal" data-item="3">0.00</span></td>
+                        </tr>
+                        </tbody>
+                </table>
+
+                <div id="totals-section" style="margin-top: 20px; font-weight: bold;">
+                    <label class="products-total">إجمالي المنتجات: <span id="total-products-amount">0.00</span> جنيه</label><br>
+                    <label class="tax-rate">نسبة الضريبة: 5.75%</label><br>
+                    <label class="tax-amount">قيمة الضريبة: <span id="total-tax-amount">0.00</span> جنيه</label><br>
+                    <label class="order-total">الإجمالي الكلي: <span id="grand-total-amount">0.00</span> جنيه</label><br>
+                    <button type="button" id="complete-purchase-btn">إتمام الشراء</button><br>
+                    <p id="checkout-message" style="font-weight: bold; display: none; margin-top: 10px;"></p>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+             <img src="../assetes/images/contact.png" alt="Contact Info" class="footer-contact-img">
+            <p>&copy; 2025 Butterfly Perfume. كل الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+     <script src="../js/script.js"></script>
+</body>
+</html>

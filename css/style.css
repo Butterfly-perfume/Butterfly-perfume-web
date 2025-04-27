@@ -1,0 +1,831 @@
+/* === بداية كود style.css === */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Add smooth scrolling */
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    vertical-align: middle;
+}
+.logo-link {
+    display: inline-block;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+.navbar li {
+    margin-right: 20px;
+    margin-left: 0;
+}
+.navbar li:last-child {
+    margin-right: 0;
+}
+
+
+.navbar a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+.navbar a:hover, .navbar a:focus {
+    color: #ff69b4;
+    outline: none;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+     margin-right: 0;
+}
+
+.icon-link {
+    margin-left: 15px;
+     margin-right: 0;
+    display: inline-block;
+}
+.icon-link:first-child {
+    margin-left: 0;
+}
+
+.icon {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
+}
+.icon-link:hover .icon {
+    opacity: 0.7;
+}
+
+
+/* Hero Section (home.html) */
+.hero {
+    background-color: #fff0f5;
+    padding: 50px 0;
+    text-align: right;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .hero-text {
+        text-align: right;
+    }
+}
+
+
+.hero-text h1 {
+    color: #ff69b4;
+    font-size: 2.6em;
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    color: #888;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: #555;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+}
+
+.hero-image {
+    flex-basis: 40%;
+    text-align: center;
+     min-width: 250px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    max-height: 320px;
+     display: inline-block;
+}
+
+/* General Button Style */
+.btn {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white !important;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
+    text-align: center;
+    line-height: normal;
+     font-family: 'Cairo', sans-serif;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #e0559f;
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Products Section */
+.products-section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.products-section h2 {
+    margin-bottom: 40px;
+    font-size: 2em;
+    color: #6b2c5b;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.25);
+}
+
+.product-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.product-img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+     background-color: #f8f8f8;
+}
+
+.product-card h3 {
+    font-size: 1.15em;
+    margin-bottom: 8px;
+    color: #333;
+     min-height: 2.4em;
+     line-height: 1.2em;
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: #ff69b4;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+/* Add to cart button inside card */
+.add-to-cart-btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+
+/* Info Sections (About, Stores, Contact) */
+.info-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 30px;
+    border-radius: 8px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.info-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #6b2c5b;
+}
+.info-section p, .info-section ul {
+    margin-bottom: 15px;
+    color: #555;
+}
+.info-section ul {
+    list-style: disc;
+    margin-right: 20px;
+    padding-right: 0;
+     margin-left: 0;
+     padding-left: 0;
+}
+.info-section li {
+    margin-bottom: 8px;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #ffdde5;
+    color: #6b2c5b;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 1px solid #f7c6d5;
+}
+.footer-contact-img {
+    max-width: 90%;
+    max-height: 80px;
+    height: auto;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+footer p {
+    margin-bottom: 0;
+    font-size: 0.95em;
+}
+
+/* Form Page Styles (Login, Register, Checkout forms) */
+.form-page, .checkout-page {
+    background: white;
+    padding: 30px 40px;
+    margin: 50px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(255, 204, 224, 0.5);
+}
+
+.form-page h2, .checkout-page h1 {
+    text-align: center;
+    color: #6b2c5b;
+    margin-bottom: 30px;
+}
+
+#checkout-user-info, #checkout-items-form, .form-page form {
+     width: 100%;
+}
+
+.form-page form input, #checkout-user-info input {
+    display: block;
+    width: 100%;
+    margin-bottom: 18px;
+    padding: 14px;
+    border: 1px solid #f7a7c3;
+    border-radius: 8px;
+    font-size: 1em;
+     font-family: 'Cairo', sans-serif;
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-page form input:focus, #checkout-user-info input:focus, .checkout-page table input[type="number"]:focus {
+     border-color: #ff69b4;
+     box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+     outline: none;
+}
+
+
+.form-page form button, #totals-section button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #f7a7c3;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+     font-family: 'Cairo', sans-serif;
+}
+
+.form-page form button:hover, #totals-section button:hover {
+    background-color: #e896b3;
+     transform: translateY(-1px);
+}
+
+/* Checkout Specific Styles */
+.checkout-page hr {
+    margin: 30px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.checkout-page table {
+    width: 100%;
+    margin-bottom: 25px;
+    border-collapse: collapse;
+}
+
+.checkout-page th, .checkout-page td {
+    text-align: right;
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    font-size: 0.95em;
+}
+.checkout-page th {
+    font-weight: bold;
+    color: #666;
+    background-color: #fafafa;
+    border-bottom-width: 2px;
+}
+
+.checkout-page td:first-child {
+    text-align: right;
+     font-weight: bold;
+}
+
+.checkout-page td:nth-child(2), /* Price */
+.checkout-page td:nth-child(4)  /* Subtotal */
+{
+    text-align: left;
+    direction: ltr;
+    font-family: sans-serif;
+}
+
+.checkout-page table input[type="number"] {
+    width: 65px;
+    padding: 8px;
+    margin: 0 5px;
+    text-align: center;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     font-size: 1em;
+     font-family: sans-serif;
+}
+
+.checkout-page table input[type="number"]::-webkit-outer-spin-button,
+.checkout-page table input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.checkout-page table input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#totals-section {
+    text-align: right;
+    font-weight: bold;
+     padding: 20px;
+     background-color: #fdf6f9;
+     border-radius: 8px;
+     margin-top: 20px;
+}
+
+#totals-section label {
+    display: block;
+    margin-bottom: 12px;
+     color: #555;
+     font-size: 1.05em;
+}
+#totals-section label span {
+    display: inline-block;
+    min-width: 80px;
+    text-align: left;
+    direction: ltr;
+    font-family: sans-serif;
+    color: #333;
+    margin-right: 10px;
+}
+
+#totals-section .order-total span {
+     font-weight: bold;
+     font-size: 1.15em;
+     color: #ff69b4;
+}
+
+
+#totals-section button#complete-purchase-btn {
+    margin-top: 20px;
+}
+
+#checkout-message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    background-color: #e8f5e9;
+    border: 1px solid #c8e6c9;
+    border-radius: 5px;
+}
+
+.d-flex {
+    display: flex;
+     justify-content: center;
+}
+
+/* --- Styles specific to Landing Page (index.html) --- */
+.landing-hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff0f5;
+    min-height: calc(100vh - 150px); /* Adjust based on header/footer height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.landing-hero img.product-highlight {
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 10px;
+    object-fit: contain;
+}
+.landing-hero h1 {
+     color: #ff69b4;
+     font-size: 2.5em;
+     margin-bottom: 15px;
+}
+ .landing-hero p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 15px;
+ }
+.sale-banner {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #d9534f;
+    margin-bottom: 30px;
+}
+.landing-hero .btn {
+     padding: 15px 35px;
+     font-size: 1.1em;
+}
+/* --- End Landing Page Styles --- */
+
+
+/* --- Styles specific to Product Detail Page --- */
+ .product-detail-layout {
+     display: flex;
+     flex-wrap: wrap;
+     gap: 30px;
+     align-items: flex-start;
+     padding: 30px 0; /* Add padding */
+ }
+ .product-detail-image {
+     flex: 1 1 300px;
+     max-width: 400px;
+ }
+ .product-img-detail {
+     width: 100%;
+     height: auto;
+     max-height: 450px;
+     object-fit: contain;
+     border-radius: 10px;
+     border: 1px solid #eee;
+     background-color: #fff;
+ }
+ .product-detail-info {
+     flex: 1 1 350px;
+ }
+ .product-detail-info h2 {
+     color: #6b2c5b;
+     margin-bottom: 15px;
+     font-size: 1.8em;
+ }
+  .product-description {
+     margin-bottom: 20px;
+     line-height: 1.7;
+     color: #555;
+     font-size: 1.05em;
+  }
+  .price-detail {
+      font-size: 1.5em; /* Slightly larger price */
+      font-weight: bold;
+      color: #ff69b4;
+      margin-bottom: 25px;
+  }
+ .product-actions label {
+      margin-left: 10px; /* RTL */
+      font-weight: bold;
+      color: #333;
+ }
+  .product-actions input[type="number"] {
+       width: 70px;
+       padding: 8px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+       margin-left: 15px; /* RTL */
+       text-align: center;
+       font-size: 1em;
+       font-family: sans-serif;
+  }
+ .product-actions .btn {
+      margin-right: 10px; /* RTL */
+      padding: 10px 20px; /* Adjust padding */
+      font-size: 1em;
+ }
+ /* --- End Product Detail Page Styles --- */
+
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+     .logo-link {
+         margin-bottom: 10px;
+     }
+    .navbar {
+         width: 100%;
+         margin-top: 10px;
+    }
+    .navbar ul {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .navbar li {
+        margin: 5px 10px;
+    }
+    .header-icons {
+        margin-top: 15px;
+         margin-left: 0;
+    }
+
+    .hero-container {
+        text-align: center;
+    }
+    .hero-text {
+        text-align: center;
+    }
+    .hero-image {
+        margin-top: 30px;
+        flex-basis: auto;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    .product-card h3 {
+         font-size: 1.1em;
+    }
+    .product-img {
+         height: 180px;
+    }
+
+    .form-page, .checkout-page {
+        width: 90%;
+        padding: 25px;
+        max-width: none;
+    }
+     .form-page form input, #checkout-user-info input {
+         padding: 12px;
+     }
+      .form-page form button, #totals-section button {
+          padding: 12px;
+          font-size: 1em;
+      }
+
+     /* Responsive Table for Checkout */
+     .checkout-page table, .checkout-page thead, .checkout-page tbody, .checkout-page th, .checkout-page td, .checkout-page tr {
+         display: block;
+     }
+     .checkout-page thead tr {
+         position: absolute;
+         top: -9999px;
+         left: -9999px;
+     }
+      .checkout-page tr {
+          border: 1px solid #ccc;
+          margin-bottom: 10px;
+          border-radius: 5px;
+          padding: 10px;
+          background: #fff; /* Ensure background for stacked rows */
+      }
+     .checkout-page td {
+         border: none;
+         border-bottom: 1px solid #eee;
+         position: relative;
+         padding-left: 50%; /* Space for label */
+         padding-right: 10px;
+         text-align: left;
+         white-space: normal;
+         padding-bottom: 5px; /* Reduce bottom padding */
+         padding-top: 5px; /* Reduce top padding */
+         min-height: 30px; /* Ensure minimum height */
+         display: flex; /* Use flex for better alignment */
+         align-items: center; /* Vertically align content */
+         justify-content: flex-end; /* Align content to the left (end in LTR) */
+     }
+     .checkout-page td:last-child {
+          border-bottom: 0; /* No border on last cell */
+     }
+
+     .checkout-page td:before {
+         position: absolute;
+         top: 50%; /* Center vertically */
+         transform: translateY(-50%); /* Adjust vertical centering */
+         right: 6px;
+         width: 45%;
+         padding-left: 10px; /* padding-left for RTL */
+         white-space: nowrap;
+         text-align: right;
+         font-weight: bold;
+         content: attr(data-label);
+         color: #6b2c5b; /* Make label color stand out */
+     }
+
+      .checkout-page td:nth-child(2), /* Price */
+      .checkout-page td:nth-child(4)  /* Subtotal */
+      {
+          text-align: left;
+          direction: ltr;
+          justify-content: flex-end; /* Align number left */
+      }
+       .checkout-page table input[type="number"] {
+           width: 50px;
+           padding: 6px;
+           margin: 0 0 0 10px; /* Margin left for RTL */
+       }
+      .checkout-page td[data-label="الكمية"] input {
+          margin-left: auto; /* Push quantity input to the left */
+      }
+
+       #totals-section label span {
+           min-width: 60px;
+       }
+
+       /* Product Detail Layout on mobile */
+        .product-detail-layout {
+             flex-direction: column;
+             align-items: center;
+        }
+        .product-detail-image {
+             max-width: 80%;
+             margin-bottom: 20px;
+        }
+        .product-detail-info {
+             text-align: center;
+             width: 100%; /* Ensure info takes full width */
+        }
+         .product-actions {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+              margin-top: 20px;
+         }
+          .product-actions input[type="number"] {
+               margin: 0 0 10px 0; /* Margin below input */
+               margin-left: 0;
+          }
+           .product-actions .btn {
+               margin: 0;
+               width: 80%;
+               max-width: 250px; /* Max width for button */
+               margin-right: 0;
+           }
+
+}
+
+@media (max-width: 480px) {
+     .hero-text h1 {
+          font-size: 2em;
+     }
+     .hero-text h2 {
+         font-size: 1.2em;
+     }
+     .product-grid {
+         grid-template-columns: 1fr;
+         gap: 15px;
+     }
+      .form-page, .checkout-page {
+          padding: 20px 15px;
+      }
+      .navbar li {
+          margin: 3px 5px;
+          font-size: 0.9em;
+      }
+      .icon-link {
+          margin-left: 10px;
+      }
+      #totals-section {
+          padding: 15px;
+      }
+      #totals-section label {
+          font-size: 1em;
+      }
+
+       /* Responsive table adjustments */
+       .checkout-page td {
+           padding-left: 10px;
+           padding-top: 10px; /* Reset padding */
+           padding-bottom: 10px;
+           text-align: right; /* Default align right */
+           justify-content: flex-start; /* Align content right (start in RTL) */
+           min-height: 40px; /* Increase height slightly */
+       }
+       .checkout-page td:before {
+           top: 50%;
+           transform: translateY(-50%);
+           right: 10px;
+           width: auto;
+           padding-left: 0;
+           position: absolute;
+           font-size: 0.9em; /* Smaller label */
+       }
+       .checkout-page td[data-label="الكمية"] input {
+           margin-left: 0; /* Reset margin */
+           margin-right: auto; /* Push input to the right */
+           max-width: 60px; /* Ensure input doesn't overflow */
+       }
+       /* Price/Subtotal align left */
+       .checkout-page td:nth-child(2),
+       .checkout-page td:nth-child(4) {
+           text-align: left;
+           justify-content: flex-end; /* Align content left */
+       }
+
+}
+
+/* === نهاية كود style.css === */
